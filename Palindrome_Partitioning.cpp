@@ -1,3 +1,14 @@
+*******************RECURSION TREE*******************
+
+partition("aab") → backtrack(0, [])
+    ↳ ispalin(0,0): "a" ✅ → ["a"]
+        ↳ ispalin(1,1): "a" ✅ → ["a", "a"]
+            ↳ ispalin(2,2): "b" ✅ → ["a", "a", "b"] ✅
+        ↳ backtrack to ["a"]
+    ↳ ispalin(1,2): "ab" ❌
+↳ ispalin(0,1): "aa" ✅ → ["aa"]
+    ↳ ispalin(2,2): "b" ✅ → ["aa", "b"] ✅
+
 class Solution {
 public:
 bool ispalin(string &s, int l,int r){
