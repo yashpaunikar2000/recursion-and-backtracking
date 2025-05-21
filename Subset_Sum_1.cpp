@@ -1,3 +1,14 @@
+// 🔷 1. Problem Statement Understanding
+// "Given an array of integers, we need to find the sum of all possible subsets (including the empty subset)."
+// This is a powerset problem, but instead of printing all subsets, we’re only interested in their sums.
+
+// 🔷 2. Approach Summary (How you’d explain it)
+// "I solved this using recursive backtracking. At every index, I have two choices:
+// Pick the current element and add it to the current sum.
+// Don't pick the current element and leave the sum as is.
+// I recursively explore both options for each index, and once I reach the end of the array, I store the current sum in a result list."
+
+// ************************************************************CODE************************************************************
 class Solution {
   public:
   void solve(int idx,int sum,int N,vector<int>&arr,vector<int>&subsetsum){
